@@ -23,6 +23,26 @@ Open the local URL printed by Vite (normally `http://localhost:5173`).
 
 This project is configured as a static GitHub Pages website. It has no backend and uses relative production asset paths, so it works at either `username.github.io` or `username.github.io/repository-name/`.
 
+### Easiest method: manual upload and `docs` folder
+
+If you upload files through GitHub's website instead of using Git commands:
+
+1. Generate the ready-to-publish folder locally:
+
+   ```bash
+   npm install
+   npm run build:github
+   ```
+
+2. Upload the whole project again, including the generated `docs/` folder.
+3. In the GitHub repository, open **Settings → Pages**.
+4. Select **Deploy from a branch**.
+5. Select branch **main**, folder **/docs**, and click **Save**.
+
+Do not select the repository root as the Pages folder. The root `index.html` is Vite source code and must be built first; serving it directly results in a blank page.
+
+### Automatic method: GitHub Actions
+
 1. Create an empty GitHub repository and make its default branch `main`.
 2. From this project folder, run:
 
