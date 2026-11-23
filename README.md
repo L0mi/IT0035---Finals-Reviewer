@@ -2,6 +2,12 @@
 
 An offline-first React + TypeScript learning website for Applied Operating Systems Modules 1–4. It includes short lessons, tested computation engines, interactive simulators, quizzes, a mistake notebook, progress analytics, achievements, and local-only persistence.
 
+## Open the website - no installation required
+
+Double-click the repository's root `index.html`. The production CSS and JavaScript are embedded in that single file, so no Node.js, npm, terminal, local server, or internet connection is needed. Keep the `course-materials/` folder beside `index.html` so the PDF links continue to work.
+
+GitHub Pages can publish the same root files using **Deploy from a branch → main → /(root)**. The included GitHub Actions workflow also publishes the committed `docs/` copy directly; it does not install dependencies or build the site online.
+
 ## Course sources
 
 The four supplied module PDFs are mapped to lesson and question page ranges in `src/data/content.ts`. They are organized with web-safe filenames in `public/course-materials/`, included in the GitHub Pages build, and linked from the website's **Course PDFs** page. Content that extends beyond explicit PDF coverage is labeled **supplementary** and makes no page claim.
